@@ -1,5 +1,20 @@
-\documentclass[9pt]{article}
-\usepackage[margin=0.5in]{geometry}
+\documentclass[9pt, letterpaper]{article}
+\usepackage{geometry}
+\geometry{
+	left=31.7mm,
+	top=33mm,
+	bottom=15.2mm
+}
+\include{cover}
 \begin{document}
-	content...
+	\maketitle
+	\begin{center}
+		\textbf{ABSTRACT}
+	\end{center}
+	\input{abstract}
+	\vspace{1in}
+	\begin{center}
+		\textbf{Summary}
+	\end{center}
+	\input{summary}
 \end{document}
