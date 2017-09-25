@@ -5,14 +5,20 @@
 	top=33mm,
 	bottom=15.2mm
 }
+\usepackage{multicol}
 \include{cover}
 \begin{document}
 	\maketitle
 	\begin{center}
 		\textbf{ABSTRACT}
 	\end{center}
+	
 	\input{abstract}
-	\vspace{1in}
+	
+	\begin{multicols}{2}
+		\input{paper}
+	\end{multicols}
+	
 	\begin{center}
 		\textbf{Summary}
 	\end{center}
