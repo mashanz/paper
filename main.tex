@@ -6,6 +6,8 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{multicol}
+\usepackage{nonfloat}
+\usepackage[demo]{graphicx}
 \renewcommand{\familydefault}{\rmdefault}
 \geometry{
 	left=1.25in,
@@ -15,6 +17,24 @@
 }
 \setlength{\footskip}{20pt}
 \sectionfont{\fontsize{10pt}{10pt}\selectfont}
+
+\makeatletter
+\newenvironment{tablehere}
+{\def\@captype{table}}
+{}
+
+\newenvironment{figurehere}
+{\def\@captype{figure}}
+{}
+\makeatother
+
+\newcommand\myfigure[1]{%
+	\medskip\noindent\begin{minipage}{\columnwidth}
+		\centering%
+		#1%
+		%figure,caption, and label go here
+	\end{minipage}\medskip}
+
 \include{cover}
 \begin{document}
 	\maketitle
